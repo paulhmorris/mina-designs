@@ -38,7 +38,7 @@ const themes = [
   {
     name: 'mina',
     icon: orangeThemeIcon,
-    label: 'Mina',
+    label: 'MiNa',
   },
 ];
 

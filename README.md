@@ -1,3 +1,3 @@
-# Mina Design
+# MiNa Designs
 
-Repository for the Mina Design landing page.
+Repository for the MiNa Designs landing page.
