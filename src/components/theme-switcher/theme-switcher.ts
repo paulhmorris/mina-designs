@@ -1,5 +1,5 @@
-import { css, html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { css, html, LitElement } from "lit";
+import { customElement, property } from "lit/decorators.js";
 
 import {
   blueThemeIcon,
@@ -7,42 +7,42 @@ import {
   darkThemeIcon,
   earthThemeIcon,
   orangeThemeIcon,
-} from './icons';
+} from "./icons";
 
 const themes = [
   {
-    name: 'default',
+    name: "default",
     icon: classicThemeIcon,
-    label: 'Classic',
+    label: "Classic",
   },
   {
-    name: 'dark',
+    name: "dark",
     icon: darkThemeIcon,
-    label: 'Dark',
+    label: "Dark",
   },
   {
-    name: 'earth',
+    name: "earth",
     icon: earthThemeIcon,
-    label: 'Earth',
+    label: "Earth",
   },
   {
-    name: 'ocean',
+    name: "ocean",
     icon: blueThemeIcon,
-    label: 'Ocean',
+    label: "Ocean",
   },
   {
-    name: 'sand',
+    name: "sand",
     icon: orangeThemeIcon,
-    label: 'Sand',
+    label: "Sand",
   },
   {
-    name: 'mina',
+    name: "mina",
     icon: orangeThemeIcon,
-    label: 'MiNa',
+    label: "MiNa",
   },
 ];
 
-@customElement('theme-switcher')
+@customElement("theme-switcher")
 export class ThemeSwitcher extends LitElement {
   static styles = [
     css`
@@ -92,11 +92,11 @@ export class ThemeSwitcher extends LitElement {
 
   private _getCurrentTheme() {
     // check for a local storage theme first
-    const localStorageTheme = localStorage.getItem('theme');
+    const localStorageTheme = localStorage.getItem("theme");
     if (localStorageTheme !== null) {
       this._setTheme(localStorageTheme);
     } else {
-      this._setTheme('default');
+      this._setTheme("default");
     }
   }
 
@@ -105,27 +105,27 @@ export class ThemeSwitcher extends LitElement {
   }
 
   private _setTheme(theme) {
-    this._doc.setAttribute('data-theme', theme);
+    this._doc.setAttribute("data-theme", theme);
 
     const _heroImage = document.querySelector(
-      '#home-hero-image'
+      "#home-hero-image"
     ) as HTMLImageElement;
-    if (theme === 'default') {
-      _heroImage.src = '/assets/images/home/classic-hero.jpg';
+    if (theme === "default") {
+      _heroImage.src = "/assets/images/home/classic-hero.jpg";
     }
-    if (theme === 'dark') {
-      _heroImage.src = '/assets/images/home/dark-hero.jpg';
+    if (theme === "dark") {
+      _heroImage.src = "/assets/images/home/dark-hero.jpg";
     }
-    if (theme === 'earth') {
-      _heroImage.src = '/assets/images/home/earth-hero.jpg';
+    if (theme === "earth") {
+      _heroImage.src = "/assets/images/home/earth-hero.jpg";
     }
-    if (theme === 'ocean') {
-      _heroImage.src = '/assets/images/home/ocean-hero.jpg';
+    if (theme === "ocean") {
+      _heroImage.src = "/assets/images/home/ocean-hero.jpg";
     }
-    if (theme === 'sand') {
-      _heroImage.src = '/assets/images/home/sand-hero.jpg';
+    if (theme === "sand") {
+      _heroImage.src = "/assets/images/home/sand-hero.jpg";
     }
-    localStorage.setItem('theme', theme);
+    localStorage.setItem("theme", theme);
     this.theme = theme;
   }
 

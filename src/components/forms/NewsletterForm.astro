@@ -1,15 +1,15 @@
 ---
-import { Icon } from 'astro-icon';
-import { Button, FormInput } from '@littlesticks/odyssey-theme-components';
+import { Icon } from "astro-icon";
+import { Button, FormInput } from "@littlesticks/odyssey-theme-components";
 ---
 
-<form name='Newsletter Form' method='POST' action='/newsletter-thank-you'>
-  <div class='newsletter-form__container'>
-    <FormInput name='Email' placeholder='hello@example.com' />
+<form name="Newsletter Form" method="POST" action="/newsletter-thank-you">
+  <div class="newsletter-form__container">
+    <FormInput name="Email" placeholder="hello@example.com" />
     <Button customIcon
       >Submit
-      <Fragment slot='icon'>
-        <Icon name='ic:baseline-chevron-right' />
+      <Fragment slot="icon">
+        <Icon name="ic:baseline-chevron-right" />
       </Fragment>
     </Button>
   </div>

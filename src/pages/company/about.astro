@@ -1,17 +1,17 @@
 ---
-import { TextSection } from '@littlesticks/odyssey-theme-components';
-import HeroSection from '../../components/sections/heros/HeroSection.astro';
-import Layout from '../../layouts/Page.astro';
+import { TextSection } from "@littlesticks/odyssey-theme-components";
+import HeroSection from "../../components/sections/heros/HeroSection.astro";
+import Layout from "../../layouts/Page.astro";
 
 const seo = {
-  title: 'About | MiNa Designs',
-  description: 'About Page',
+  title: "About | MiNa Designs",
+  description: "About Page",
 };
 ---
 
 <Layout {seo}>
   <HeroSection>
-    <div slot='text-container'>
+    <div slot="text-container">
       <h1>About MiNa Designs</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, nisi
@@ -20,11 +20,11 @@ const seo = {
         Numquam.
       </p>
     </div>
-    <picture slot='image-container'>
+    <picture slot="image-container">
       <img
-        src='/assets/images/home/classic-hero.jpg'
-        alt='Astro Odyssee'
-        id='home-hero-image'
+        src="/assets/images/home/classic-hero.jpg"
+        alt="Astro Odyssee"
+        id="home-hero-image"
       />
     </picture>
   </HeroSection>

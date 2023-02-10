@@ -7,13 +7,13 @@ const { reversed } = Astro.props;
     reversed && `text-and-image__section--reversed`
   }`}
 >
-  <div class='text-and-image__image'>
-    <slot name='image-container'></slot>
+  <div class="text-and-image__image">
+    <slot name="image-container" />
   </div>
-  <div class='text-and-image__text'>
-    <slot name='text-container'></slot>
-    <div class='text-and-image__btns'>
-      <slot name='btns-container'></slot>
+  <div class="text-and-image__text">
+    <slot name="text-container" />
+    <div class="text-and-image__btns">
+      <slot name="btns-container" />
     </div>
   </div>
 </section>

@@ -1,22 +1,22 @@
 export const footerSocials = [
   {
-    name: 'Instagram',
-    url: 'https://www.instagram.com/minadesignz/',
-    icon: 'mdi:instagram',
+    name: "Instagram",
+    url: "https://www.instagram.com/minadesignz/",
+    icon: "mdi:instagram",
   },
 ];
 
 export const footerLists = [
   {
-    title: 'Company',
+    title: "Company",
     items: [
       {
-        title: 'Blog',
-        slug: '/blog',
+        title: "Blog",
+        slug: "/blog",
       },
       {
-        title: 'Contact',
-        slug: '/company/contact',
+        title: "Contact",
+        slug: "/company/contact",
       },
     ],
   },
