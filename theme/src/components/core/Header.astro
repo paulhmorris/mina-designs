@@ -153,14 +153,17 @@ const { navData, rightMenu } = Astro.props;
       inset: 0;
       z-index: 99;
     }
-    header[mobile-menu-open] .header-nav__container {
+    .header-action-item__container {
+      display: none;
+    }
+    div[mobile-menu-open] .header-nav__container {
       display: flex;
     }
-    header[mobile-menu-open] nav ul {
+    div[mobile-menu-open] nav ul {
       align-items: center;
       flex-direction: column;
     }
-     header[mobile-menu-open] nav ul li {
+     div[mobile-menu-open] nav ul li {
        font-size: var(--font-size-lg);
        margin-bottom: 1rem;
      }

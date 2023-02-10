@@ -16,18 +16,7 @@ const seo = {
 };
 ---
 <Layout {seo}>
-  <TextAndImageHero reversed>
-    <div slot="text-container">
-      <h1>Make your party pop!</h1>
-      <p>We'll take your party to new heights with our balloon creations.</p>
-    </div>
-    <div slot="btns-container">
-      <Button href="/company/contact" customIcon
-        >Get Started <Fragment slot="icon">
-          <Icon name="ic:baseline-chevron-right" />
-        </Fragment></Button
-      >
-    </div>
+  <TextAndImageHero>
     <picture slot="image-container">
       <img
         src="/assets/images/balloons-landing.png"
@@ -35,6 +24,21 @@ const seo = {
         id="home-hero-image"
       />
     </picture>
+    <div slot="text-container">
+      <h1>Make your party pop!</h1>
+      <p>We'll take your party to new heights with our balloon creations.</p>
+    </div>
+    <div slot="btns-container">
+      <Button
+        href="/company/contact"
+        customIcon
+        >
+        Get Started <Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right" />
+        </Fragment>
+      </Button
+      >
+    </div>
   </TextAndImageHero>
 
   <CustomerQuoteSection

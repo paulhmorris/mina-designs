@@ -7,29 +7,25 @@ const { reversed } = Astro.props;
     reversed && `text-and-image__section--reversed`
   }`}
 >
+  <div class="text-and-image__image">
+    <slot name="image-container" />
+  </div>
   <div class="text-and-image__text">
     <slot name="text-container" />
     <div class="text-and-image__btns">
       <slot name="btns-container" />
     </div>
   </div>
-  <div class="text-and-image__image">
-    <slot name="image-container" />
-  </div>
 </section>
 
 <style>
   .text-and-image__section {
-    padding: var(--section-margin) 0;
+    padding: var(--section-margin) 4rem;
     min-height: clamp(90vh, 100vw, calc(100vh - var(--navbar-height)));
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    display: flex;
+    justify-content: center;
     gap: 1rem;
     background-color: var(--theme-surface-1);
-  }
-  .text-and-image__section--reversed .text-and-image__text {
-    order: 2;
   }
   .text-and-image__text {
     padding: 2rem 0;
@@ -45,8 +41,9 @@ const { reversed } = Astro.props;
   }
   @media (max-width: 768px) {
     .text-and-image__section {
-      padding: var(--section-margin) 0;
+      padding: 0 1rem 1rem 1rem;
       grid-template-columns: 1fr;
+      flex-wrap: wrap-reverse;
     }
     .text-and-image__text {
       padding: 2rem 0;
