@@ -21,7 +21,6 @@ const { reversed } = Astro.props;
 <style>
   .text-and-image__section {
     padding: var(--section-margin) 4rem;
-    min-height: clamp(90vh, 100vw, calc(100vh - var(--navbar-height)));
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -32,10 +31,13 @@ const { reversed } = Astro.props;
     justify-self: center;
     max-width: 25rem;
   }
+  .text-and-image__image {
+    height:min-content
+  }
   .text-and-image__image :global(img) {
     margin-left: auto;
     height: 100%;
-    max-height: 80vh;
+    max-height: 40vh;
     object-fit: contain;
     border-radius: var(--theme-shape-radius);
   }
