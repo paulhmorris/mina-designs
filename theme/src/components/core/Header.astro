@@ -39,41 +39,49 @@ const { navData, rightMenu } = Astro.props;
   }
 </script>  
 
-<header id="odysseyNavHeader" class={`${rightMenu ? "header--right" : ``.trim()}`}>
-  <div class="header-logo-menu__container">
-  <button id="menuButton" title="Open Main Menu">
-    <span id="menuButtonIconHam">
-      <Icon name="ic:baseline-menu" width="24px" height="24px" />
-    </span>
-    <span id="menuButtonIconClose" hidden>
-      <Icon name="ic:baseline-close" width="24px" height="24px" />
-    </span>
-  </button>
-  <a class="header-logo__link" href="/">
-    <slot name="logo">
-    </slot>
-  </a>
-  </div>
-  <div class="header-nav__container">
-    <slot name="nav">
-      {navData && <nav>
-        <ul>
-          {navData.map(navItem => (
-            (<li><a href={navItem.slug} >{navItem.title}</a></li>)
-          ))}
-        </ul>
-      </nav>}
-    </slot>
-  </div>
-  <div class="header-action-item__container">
-    <slot name="action-item">
-    </slot>
+<header>
+  <div id="odysseyNavHeader" class={`header-container ${rightMenu ? "header--right" : ``.trim()}`}>
+    <div class="header-logo-menu__container">
+      <button id="menuButton" title="Open Main Menu">
+        <span id="menuButtonIconHam">
+          <Icon name="ic:baseline-menu" width="24px" height="24px" />
+        </span>
+        <span id="menuButtonIconClose" hidden>
+          <Icon name="ic:baseline-close" width="24px" height="24px" />
+        </span>
+      </button>
+      <a class="header-logo__link" href="/">
+        <slot name="logo">
+        </slot>
+      </a>
+    </div>
+    <div class="header-nav__container">
+      <slot name="nav">
+        {navData && <nav>
+          <ul>
+            {navData.map(navItem => (
+              (<li><a href={navItem.slug} >{navItem.title}</a></li>)
+            ))}
+          </ul>
+        </nav>}
+      </slot>
+    </div>
+    <div class="header-action-item__container">
+      <slot name="action-item">
+      </slot>
+    </div>
   </div>
 </header>
 
 <style>
   header {
+    background-color: var(--theme-surface-1);
+    height: var(--navbar-height)
+  }
+  .header-container {
     width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
     padding: 1rem;
     display: flex;
     justify-content: space-between;

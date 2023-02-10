@@ -1,12 +1,12 @@
 ---
 import {
 Button,
-CtaCardSection,
-CustomerQuoteSection,
-StickyTextImageSection
+CtaCardSection
 } from '@littlesticks/odyssey-theme-components';
 import { Icon } from 'astro-icon';
+import CustomerQuoteSection from "../components/sections/CustomerQuoteSection.astro";
 import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+import StickyTextImageSection from "../components/sections/StickyTextImageSection.astro";
 import Layout from '../layouts/Page.astro';
 
 const seo = {
@@ -15,8 +15,6 @@ const seo = {
     'Home | MiNa Designs. Bring a splash of color to your next party!',
 };
 ---
-
-<!-- <AnnouncementBar text="Read Our Latest Blog Post" href="/blog/posts/remote-work-mental-health/" slot="announcement-bar"/> -->
 <Layout {seo}>
   <TextAndImageHero reversed>
     <div slot="text-container">
@@ -24,7 +22,7 @@ const seo = {
       <p>We'll take your party to new heights with our balloon creations.</p>
     </div>
     <div slot="btns-container">
-      <Button href="/theme/get-started" customIcon
+      <Button href="/company/contact" customIcon
         >Get Started <Fragment slot="icon">
           <Icon name="ic:baseline-chevron-right" />
         </Fragment></Button
@@ -35,7 +33,6 @@ const seo = {
         src="/assets/images/balloons-landing.png"
         alt="Astro Odyssee"
         id="home-hero-image"
-        style="object-fit: contain;"
       />
     </picture>
   </TextAndImageHero>
@@ -74,7 +71,7 @@ const seo = {
     <picture slot="image-container">
       <img
         src="/assets/images/landing-1/gender-reveal-arch.jpeg"
-        alt="Astro Odyssey"
+        alt="A balloon arch at a gender reveal party"
         loading="lazy"
       />
     </picture>
@@ -86,7 +83,7 @@ const seo = {
   >
     <h2>Get the party started 🥳</h2>
     <p>Fill out our inquiry, and we'll get back to you as soon as possible.</p>
-    <Button href="/theme/get-started" customIcon
+    <Button href="/company/contact" customIcon
       >Get Started<Fragment slot="icon">
         <Icon name="ic:baseline-chevron-right" />
       </Fragment></Button

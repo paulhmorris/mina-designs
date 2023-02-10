@@ -1,4 +1,4 @@
-export function generateSlug(string) {
+export function generateSlug(string: string) {
   return string
     .toString()
     .trim()
