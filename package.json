@@ -1,10 +1,10 @@
 {
-  "name": "odyssey-theme",
+  "name": "mina-design",
   "version": "2.0.2",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git@github.com:littlesticksdev/odyssey-theme"
+    "url": "git@github.com:paulhmorris/mina-design.git"
   },
   "scripts": {
     "dev": "astro dev",
@@ -12,5 +12,16 @@
     "build": "astro build",
     "preview": "astro preview",
     "format": "npx prettier -w ."
+  },
+  "devDependencies": {
+    "@astrojs/lit": "^1.0.1",
+    "@astrojs/mdx": "^0.8.2",
+    "@astrojs/sitemap": "^0.1.0",
+    "@littlesticks/odyssey-theme-components": "^0.0.23",
+    "@webcomponents/template-shadowroot": "^0.1.0",
+    "astro": "^2.0.10",
+    "astro-icon": "^0.8.0",
+    "lit": "^2.3.1",
+    "prettier-plugin-astro": "^0.1.0-next.5"
   }
 }
