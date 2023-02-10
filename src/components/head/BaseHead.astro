@@ -13,13 +13,16 @@ const title = Astro.props.title || settings.title;
 const description = Astro.props.description || settings.description;
 const canonicalURL =
   Astro.props.canonicalURL || new URL(Astro.url.pathname, Astro.site);
-const image = new URL(Astro.props.image || "./social.png", Astro.site);
+const image = new URL("./social.webp", Astro.site);
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width" />
-<link rel="icon" type="image/png" href="/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+  rel="icon"
+  href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎈</text></svg>"
+/>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -38,7 +41,6 @@ const image = new URL(Astro.props.image || "./social.png", Astro.site);
 <meta name="geo.placename" content="Houston" />
 <meta name="geo.position" content="29.7604267,-95.3698028" />
 <meta name="ICBM" content="29.7604267,-95.3698028" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- Generator -->
 <meta name="generator" content={Astro.generator} />
