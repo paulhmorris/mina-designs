@@ -60,17 +60,18 @@ const image = new URL("./social.webp", Astro.site);
 <meta property="twitter:image" content={image} />
 
 <!-- Panelbear Analytics -->
-<script async src="https://cdn.panelbear.com/analytics.js?site=56oBuLxzEU1">
+<script async src="https://rum.cronitor.io/script.js">
+
 </script>
 <script>
   // @ts-nocheck
   var host = window.location.hostname;
   if (host != "localhost") {
-    window.panelbear =
-      window.panelbear ||
+    window.cronitor =
+      window.cronitor ||
       function () {
-        (window.panelbear.q = window.panelbear.q || []).push(arguments);
+        (window.cronitor.q = window.cronitor.q || []).push(arguments);
       };
-    panelbear("config", { site: "56oBuLxzEU1" });
+    cronitor("config", { clientKey: "9bb2b8f1a09e213cb9800f93f7554ecf" });
   }
 </script>
